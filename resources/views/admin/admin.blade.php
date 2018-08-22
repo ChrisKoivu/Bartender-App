@@ -21,25 +21,25 @@
 
        
 
-        @if (count($volunteers))
+        @if (count($orders))
 
-        <table id ="volunteers"> 
+        <table id ="Orders"> 
 
           <tr><th>Name</th><th>Status</th><th>Email</th><th>Home Phone</th><th>Work Phone</th><th>Cell Phone</th><th>Action</th></tr>
 
-        @foreach($volunteers as $volunteer)
+        @foreach($orders as $order)
 
-          <tr><td>{{$volunteer->first_name . ' '}} {{$volunteer->last_name}}</td>
+          <tr><td>{{$order->name . ' '}}</td>
 
-          <td>{{$volunteer->status}}</td><td>{{$volunteer->email}}</td>
+          <td>{{$order->drink_name}}</td><td>{{$volunteer->email}}</td>
 
-          <td>{{$volunteer->home_phone}} </td><td>{{$volunteer->work_phone}} </td>
+          <td>{{$order->drink_description}} </td><td>{{$volunteer->work_phone}} </td>
 
-          <td>{{$volunteer->cell_phone}} </td>
+          <td>{{$order->phone}} </td>
 
           <td>
 
-            <a href="{{action('VolunteersController@edit', $volunteer->id)}}" class="btn btn-warning">Edit</a>
+            <a href="{{action('DrinksController@edit', $volunteer->id)}}" class="btn btn-warning">Edit</a>
 
           </td>
 

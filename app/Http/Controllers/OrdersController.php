@@ -6,6 +6,15 @@ use Illuminate\Http\Request;
 
 class OrdersController extends Controller
 {
+
+    /** class constructor */
+
+    public function __construct()
+    {
+        // verify logged in user */
+        $this->middleware('auth');
+    }
+
     /**
      * Display a listing of the resource.
      *

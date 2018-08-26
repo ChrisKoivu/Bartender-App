@@ -13,7 +13,7 @@ class Drink extends Model
      */
 
     protected $fillable = [
-       'name', 'description', 
+       'name', 'description', 'img_link'
     ];
 
 }

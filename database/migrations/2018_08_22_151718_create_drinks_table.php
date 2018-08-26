@@ -17,9 +17,13 @@ class CreateDrinksTable extends Migration
             $table->increments('id');
             $table->string('name'); 	
             $table->text('description'); 	
+            $table->string('img_link');
+
              // FK to orders table
              $table->integer('order_id')->unsigned();
              $table->foreign('order_id')->references('id')->on('orders');
+             
+             // timestamps for creation and modified 
              $table->timestamps();
         });
     }

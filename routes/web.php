@@ -11,10 +11,11 @@
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
 
 Auth::routes();
 
+/** send to home controller */
+Route::get('/', 'HomeController@index')->name('home');
+
+/** in case /home is typed in address bar  */
 Route::get('/home', 'HomeController@index')->name('home');

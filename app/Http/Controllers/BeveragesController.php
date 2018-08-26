@@ -4,17 +4,8 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 
-class OrdersController extends Controller
+class BeveragesController extends Controller
 {
-
-    /** class constructor */
-
-    public function __construct()
-    {
-        // verify logged in user
-        $this->middleware('auth');
-    }
-
     /**
      * Display a listing of the resource.
      *
@@ -43,17 +34,7 @@ class OrdersController extends Controller
      */
     public function store(Request $request)
     {
-          $drink = $this->validate(request(), [
-            'name' => 'required',
-            
-          ]);
-
-          // get user model 
-          $user = auth()->user();
-
-          // create drink object and save it
-          $user->drinks()->create($drink);
-          return back()->with('success', 'Drink has been added');
+        //
     }
 
     /**

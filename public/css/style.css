@@ -1,0 +1,16 @@
+#drink {
+    padding:10px;
+}
+.thumbnail {
+  height:100px;
+  width: 100px;
+}
+
+.thumbnail-med {
+    height:300px;
+    width: 300px;
+}
+
+.card-title {
+    font-weight: bold;
+}

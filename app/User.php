@@ -34,4 +34,17 @@ class User extends Authenticatable
     protected $hidden = [
         'password', 'remember_token',
     ];
+
+
+     /**
+     * Get the orders associated with this user
+     */
+    public function orders()
+    {
+        return $this->hasMany('App\Order');
+    }
+
 }
+
+
+

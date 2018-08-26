@@ -16,4 +16,12 @@ class Drink extends Model
        'name', 'description', 'img_link'
     ];
 
+    /**
+     * Get the order that this drink is associated with.
+     */
+    public function order()
+    {
+        return $this->belongsTo('App\Order');
+    }
+
 }

@@ -43,17 +43,19 @@ class OrdersController extends Controller
      */
     public function store(Request $request)
     {
-          $drink = $this->validate(request(), [
-            'name' => 'required',
-            
+          $order = $this->validate(request(), [
+            'drink_id' => 'required',
           ]);
 
           // get user model 
           $user = auth()->user();
 
+          // using laravel helper function to add user id
+          $order = array_add($order, 'user_id', $user->id);
+
           // create drink object and save it
-          $user->drinks()->create($drink);
-          return back()->with('success', 'Drink has been added');
+          $user->orders()->create($order);
+          return back()->with('success', 'Order has been added');
     }
 
     /**

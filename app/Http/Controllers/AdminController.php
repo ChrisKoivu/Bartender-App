@@ -28,7 +28,9 @@ class AdminController extends Controller
     public function admin()
     {
         // create a orders object with the fields we need
-       
-      
+	    $orders = DB::table('orders')
+        ->join('users', 'orders.user_id', '=', 'users.id')
+        ->select('orders.*', 'users.name')->get();
+        return view('admin.admin', compact('orders'));
     }
 }

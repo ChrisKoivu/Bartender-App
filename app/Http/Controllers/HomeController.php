@@ -4,6 +4,10 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 
+/* to access drink model */
+use App\Drink;
+
+
 class HomeController extends Controller
 {
     /**
@@ -23,6 +27,10 @@ class HomeController extends Controller
      */
     public function index()
     {
-        return view('home');
+         /* get posts for any auth user */
+        $drinks = Drink::all()->toArray();
+        
+        return view('home', compact('drinks'));
+    
     }
 }

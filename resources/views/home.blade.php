@@ -37,7 +37,7 @@
                                 <div class="btn-group">
                                     <form method="post" action="{{url('orders')}}">
                                       {{csrf_field()}}
-                                        <button type="button" name="drink_id" value = {{$drink['id']}} class="btn btn-sm btn-outline-secondary">Order</button>
+                                        <button type="submit" name="drink_id" value = {{$drink['id']}} class="btn btn-sm btn-outline-secondary">Order</button>
                                     </form>
                                 </div>
                             </div>

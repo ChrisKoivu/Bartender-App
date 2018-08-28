@@ -3,6 +3,21 @@
 @section('content')
 
 <div class="container">
+        @if ($errors->any())
+        <div class="alert alert-danger">
+            <ul>
+                @foreach ($errors->all() as $error)
+                    <li>{{ $error }}</li>
+                @endforeach
+            </ul>
+        </div><br />
+        @endif
+        @if (\Session::has('success'))
+        <div class="alert alert-success">
+            <p>{{ \Session::get('success') }}</p>
+        </div><br />
+        @endif
+  
         <div class="row">
         <div class="col-md-8 col-md-offset-2">
             <div class="panel panel-default">
@@ -20,7 +35,10 @@
                             </p>
                             <div class="d-flex justify-content-between align-items-center">
                                 <div class="btn-group">
-                                <button type="button" value = {{$drink['id']}} class="btn btn-sm btn-outline-secondary">Order</button>
+                                    <form method="post" action="{{url('orders')}}">
+                                      {{csrf_field()}}
+                                        <button type="button" name="drink_id" value = {{$drink['id']}} class="btn btn-sm btn-outline-secondary">Order</button>
+                                    </form>
                                 </div>
                             </div>
                           </div>

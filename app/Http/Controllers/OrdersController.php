@@ -53,6 +53,7 @@ class OrdersController extends Controller
           // using laravel helper function to add user id
           $order = array_add($order, 'user_id', $user->id);
 
+          print_r($order);
           // create drink object and save it
           $user->orders()->create($order);
           return back()->with('success', 'Order has been added');

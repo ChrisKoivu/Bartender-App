@@ -19,7 +19,7 @@ class Order extends Model
      */
 
     protected $fillable = [
-        //'name', 'description', 
+        'drink_id', 'user_id',
      ];
 
      /**

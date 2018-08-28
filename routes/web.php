@@ -19,3 +19,5 @@ Route::get('/', 'HomeController@index')->name('home');
 
 /** in case /home is typed in address bar  */
 Route::get('/home', 'HomeController@index')->name('home');
+
+Route::resource('orders','OrdersController');

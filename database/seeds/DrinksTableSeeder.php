@@ -34,8 +34,8 @@ class DrinksTableSeeder extends Seeder
         ]);
         
         DB::table('drinks')->insert([
-            'name' => 'Dirty Martini',
-            'description' => 'this cocktail is made with a decadent mix of vodka, Kahlua and Bailey’s Irish Cream.',
+            'name' => 'Martini',
+            'description' => 'this cocktail is made with gin and vermouth, and garnished with an olive.',
             'amount' => 8.99,
             'img_link' => '/images/tom-collins.jpg',
         ]);

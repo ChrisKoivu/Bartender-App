@@ -60,7 +60,11 @@
                                                      document.getElementById('logout-form').submit();">
                                             Logout
                                         </a>
-
+                                        <?php
+                                        if(auth()->user()->isAdmin()) {
+                                          echo '<a href="/admin" >View Orders </a>';
+                                        }
+                                        ?>
                                         <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
                                             {{ csrf_field() }}
                                         </form>

@@ -12,7 +12,7 @@ class User extends Authenticatable
     const ADMIN_ROLE = 'admin';
     const DEFAULT_ROLE = 'default';
     
-    public function isAdmin()    {        
+    public function isAdmin()    {     
        return $this->role === self::ADMIN_ROLE;    
     }
     

@@ -24,8 +24,15 @@
       @if (count($orders))
 
         <table id ="Orders"> 
-
-         
+           <tr><th>Order ID</th><th>Customer Name</th><th>Drink</th><th>Price</th></tr>
+            @foreach($orders as $order)
+                <tr>
+                    <td>{{$order->id}}</td>
+                    <td>{{$order->name}}</td>
+                    <td>{{$order->drink_name}} </td>
+                    <td>{{'$' . $order->amount}} </td>
+                </tr> 
+            @endforeach
         </table> 
 
        @else

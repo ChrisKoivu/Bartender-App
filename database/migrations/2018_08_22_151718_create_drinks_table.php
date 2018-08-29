@@ -15,7 +15,7 @@ class CreateDrinksTable extends Migration
     {
         Schema::create('drinks', function (Blueprint $table) {
             $table->increments('id');
-            $table->string('name'); 	
+            $table->string('drink_name'); 	
             $table->text('description'); 	
             $table->unsignedDecimal('amount', 8, 2); 	
             $table->string('img_link');

@@ -30,7 +30,9 @@ class AdminController extends Controller
         // create a orders object with the fields we need
 	    $orders = DB::table('orders')
         ->join('users', 'orders.user_id', '=', 'users.id')
-        ->select('orders.*', 'users.name')->get();
+        ->join('drinks', 'orders.drink_id', '=', 'drinks.id')
+        ->select('orders.id', 'users.name', 'drinks.drink_name','drinks.amount')->get();
+        
         return view('admin.admin', compact('orders'));
     }
 }

@@ -16,3 +16,7 @@ at the command line:<br>
 replace 'admin@localhost.com' with the email address of the registered
 user to designate as the admin.
 
+# Viewing Orders
+
+Only Admin can view the orders. Under the right dropdrown, if you
+have admin access, select 'View Orders'

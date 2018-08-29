@@ -29,7 +29,7 @@
                         <div class="card mb-6 shadow-sm">
                           <img class="thumbnail-med" src={{url($drink['img_link'])}} width="" height="" alt=""/>
                             <div class="card-body">
-                            <h5 class="card-title">{{$drink['name']}}</h5>
+                            <h5 class="card-title">{{$drink['drink_name']}}</h5>
                             <p class="card-text">
                                 {{$drink['description']}}
                             </p>

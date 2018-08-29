@@ -14,3 +14,7 @@
 .card-title {
     font-weight: bold;
 }
+
+#Orders th, td {
+    padding:10px;
+}

@@ -32,5 +32,12 @@ class DrinksTableSeeder extends Seeder
             'amount' => 8.99,
             'img_link' => '/images/tom-collins.jpg',
         ]);
+        
+        DB::table('drinks')->insert([
+            'name' => 'Dirty Martini',
+            'description' => 'this cocktail is made with a decadent mix of vodka, Kahlua and Bailey’s Irish Cream.',
+            'amount' => 8.99,
+            'img_link' => '/images/tom-collins.jpg',
+        ]);
     }
 }

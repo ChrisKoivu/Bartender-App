@@ -1,29 +1,18 @@
-# README #
 
-This README would normally document whatever steps are necessary to get your application up and running.
+# Designate Admin User
 
-### What is this repository for? ###
+I have created a is_admin middleware class to verify a user is an admin. It is 
+registered in the Kernel.php file under 'is_admin'. The admin route calls this 
+middleware and verifies the user is an admin before the AdminController processes
+the request.
 
-* Quick summary
-* Version
-* [Learn Markdown](https://bitbucket.org/tutorials/markdowndemo)
+To designate a registered user as an admin, type the following
+at the command line:<br>
+     
+     php artisan tinker
+     use App\User;
+     User::where('email', 'admin@localhost.com')->update(['role' => 'admin']);
 
-### How do I get set up? ###
+replace 'admin@localhost.com' with the email address of the registered
+user to designate as the admin.
 
-* Summary of set up
-* Configuration
-* Dependencies
-* Database configuration
-* How to run tests
-* Deployment instructions
-
-### Contribution guidelines ###
-
-* Writing tests
-* Code review
-* Other guidelines
-
-### Who do I talk to? ###
-
-* Repo owner or admin
-* Other community or team contact

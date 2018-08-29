@@ -27,7 +27,7 @@ class DrinksTableSeeder extends Seeder
         ]);
         
         DB::table('drinks')->insert([
-            'name' => 'Mudslid',
+            'name' => 'Mudslide',
             'description' => 'mojito is a cocktail made with white rum, sugar, lime juice, soda water, and mint',
             'amount' => 8.99,
             'img_link' => '/images/tom-collins.jpg',

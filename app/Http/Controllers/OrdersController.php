@@ -43,7 +43,7 @@ class OrdersController extends Controller
      */
     public function store(Request $request)
     {
-        dd(request()->all());
+        //dd(request()->all());
           $order = $this->validate(request(), [
             'drink_id' => 'required',
           ]);
@@ -57,7 +57,7 @@ class OrdersController extends Controller
           print_r($order);
           // create drink object and save it
           $user->orders()->create($order);
-          return back()->with('success', 'Order has been added');
+          return back()->with('success', 'Your order has been added');
     }
 
     /**

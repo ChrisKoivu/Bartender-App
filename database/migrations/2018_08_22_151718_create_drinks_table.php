@@ -17,6 +17,7 @@ class CreateDrinksTable extends Migration
             $table->increments('id');
             $table->string('name'); 	
             $table->text('description'); 	
+            $table->unsignedDecimal('amount', 8, 2); 	
             $table->string('img_link');
 
              // timestamps for creation and modified 

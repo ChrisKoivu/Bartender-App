@@ -33,6 +33,9 @@
                             <p class="card-text">
                                 {{$drink['description']}}
                             </p>
+                            <p class="price">
+                                {{'$' . $drink['amount']}}
+                            <p>
                             <div class="d-flex justify-content-between align-items-center">
                                 <div class="btn-group">
                                     <form method="post" action="{{url('orders')}}">

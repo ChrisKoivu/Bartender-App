@@ -43,7 +43,7 @@ class OrdersController extends Controller
      */
     public function store(Request $request)
     {
-        //validate input
+          // validate input
           $order = $this->validate(request(), [
             'drink_id' => 'required',
           ]);

@@ -50,7 +50,7 @@ class OrdersController extends Controller
 
           // get user model 
           $user = auth()->user();
-          // create drink object and save it
+          // create object and save it to db
           $user->orders()->create($order);
           return back()->with('success', 'Your order has been added');
     }

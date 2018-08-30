@@ -33,6 +33,7 @@
                     <td>{{'$' . $order->amount}} </td>
                 </tr> 
             @endforeach
+           
         </table> 
 
        @else
